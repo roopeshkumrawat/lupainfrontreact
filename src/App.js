@@ -10,11 +10,13 @@ import LatestProperties from './Components/LatestProperties';
 import Help from './Components/Help';
 import Locations from './Components/Locations';
 import FeaturedProperties from './Components/FeaturedPorperties';
+import MobileMenus from './Components/MobileMenus';
 
 
 function App() {
   return (
     <>
+      <MobileMenus />
       <Header />
       <HeroSearch />
       <FeaturedProperties />

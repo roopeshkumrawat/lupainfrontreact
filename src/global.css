@@ -7036,3 +7036,7 @@ aside .g-recaptcha iframe {
 .featured-slider .owl-nav {
     display: none;
 }
+
+.displayBlock{
+    display: block !important;
+}

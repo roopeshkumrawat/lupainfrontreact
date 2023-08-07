@@ -9,9 +9,11 @@ import Nl from "../images/NL-min.png"
 import Sv from "../images/SV-min.png"
 import Logo from "../images/logo-new.png"
 
+
 function Header() {
     return (
         <header>
+        
             <div className="wrapper">
 
                 <div className="units-row top">
@@ -59,13 +61,13 @@ function Header() {
                     </div>
                     <div className="unit-35 buttons">
                         <a href="/account" className="btn user"><i className="fa fa-user"></i></a>
-                       {" "} <form action="" method="post" className="btn currency-selector">
+                        {" "} <form action="" method="post" className="btn currency-selector">
                             <input id="currency-select" type="hidden" name="currency" />
                             <a className="btn currency active" data-id="1" href="javascript:;">	&euro;</a>
                             <a className="btn currency " data-id="2" href="javascript:;">$</a>
                             <a className="btn currency " data-id="3" href="javascript:;">&pound;</a>
                         </form>
-                       {" "}<a href="/free-property-valuation" className="btn book">
+                        {" "}<a href="/free-property-valuation" className="btn book">
                             <span style={{ lineHeight: "1.1em", fontSize: "0.9em" }}>Selling?<br />Book A FREE Valuation</span>
                         </a>
                     </div>

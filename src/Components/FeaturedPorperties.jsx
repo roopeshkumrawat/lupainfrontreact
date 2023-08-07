@@ -27,7 +27,13 @@ function FeaturedProperties() {
                 items:1
             },
             600:{
+                items:2
+            },
+            768:{
                 items:3
+            },
+            998:{
+                items:4
             },
         }
     };
