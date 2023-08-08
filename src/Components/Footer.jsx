@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 function Footer() {
     return (
         <footer>
@@ -15,11 +16,11 @@ function Footer() {
                         </div>
                         <div className="tel">
                             <strong>Tel:</strong>
-                            <p><a href="tel:+34922796527">+34 922 796 527</a></p>
+                            <p><Link to="tel:+34922796527">+34 922 796 527</Link></p>
                         </div>
                         <div className="email">
                             <strong>Email:</strong>
-                            <p><a href="mailto:info@lupain.com">info@lupain.com</a></p>
+                            <p><Link to="mailto:info@lupain.com">info@lupain.com</Link></p>
                         </div>
                     </div>
                     <div className="unit-30 contact">
@@ -60,8 +61,8 @@ function Footer() {
 
                     <div className="copyright unit-75">
                         Copyright &copy; 2023 Lupain Tenerife Estate Agents. All Rights Reserved.
-                        <a href="/privacy">Privacy Policy</a> | <a href="/terms">Terms &amp; Conditions</a> | <a
-                            href="/locations">Locations</a>
+                        <Link to="/privacy">Privacy Policy</Link> | <Link to="/terms">Terms &amp; Conditions</Link> | <Link
+                            to="/locations">Locations</Link>
                     </div>
                 </div>
 

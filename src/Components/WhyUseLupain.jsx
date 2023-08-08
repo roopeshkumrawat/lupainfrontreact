@@ -1,6 +1,6 @@
 import homeIcon from "../images/icon-house.png";
 import handIcon from "../images/icon-handshake.png";
-import poundIcon from "../images/icon-pound.png"
+import poundIcon from "../images/icon-pound.png";
 
 function WhyUseLupain() {
     

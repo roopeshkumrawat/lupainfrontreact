@@ -9,6 +9,7 @@ import sliderImg2 from "../images/07c44de9997d743f22f4e6902ae4bbe1.jpg";
 import sliderImg3 from "../images/051de69513f95adec9ebf291589feaca.jpg";
 import sliderImg4 from "../images/1b0ab8ccd14cc6b2c9d98f210c8cc039.jpg";
 import sliderImg5 from "../images/3c80417f0d0b3fee7cbf4a56f399f25a.jpg";
+import { Link } from "react-router-dom";
 
 function Partners() {
     const options ={
@@ -38,7 +39,7 @@ function Partners() {
                                 </div>
                                 <div className="item">
                                     <div className="quote">
-                                        <img src={sliderImg1} alt="" />
+                                        <img src={sliderImg1} alt="sliderimg" />
                                         <p>Having lived here for nearly 20 years I have seen many estate agents as I
                                             have bought and sold 8 properties in this period. Recently I purchased a
                                             1-Bed apartment at Cristian Sur from Lupain and their service was
@@ -58,7 +59,7 @@ function Partners() {
                                 </div>
                                 <div className="item">
                                     <div className="quote">
-                                        <img src={sliderImg2} alt="" />
+                                        <img src={sliderImg2} alt="sliderImg" />
                                         <p>May we take this opportunity to thank you all at Lupain for your help
                                             during our recent purchase of our new home in Tenerife. We found that
                                             the friendly atmosphere created and the advice given was of great
@@ -77,7 +78,7 @@ function Partners() {
                                 </div>
                                 <div className="item">
                                     <div className="quote">
-                                        <img src={sliderImg3} alt="" />
+                                        <img src={sliderImg3} alt="sliderImg" />
                                         <p>Our dream was to buy a property in the south of the island mainly for
                                             the sunshine and as in investment. Lupain provided us with a no frills
                                             and frank viewing and we fell in love with this flat in Los Cristianos.</p>
@@ -86,7 +87,7 @@ function Partners() {
                                 </div>
                                 <div className="item">
                                     <div className="quote">
-                                        <img src={sliderImg1} alt="" />
+                                        <img src={sliderImg1} alt="sliderImg" />
                                         <p>We have stayed for our first holiday in our new holiday home. Having
                                             just retired we have looked forward to this for a long time, and finally
                                             we purchased our dream home through Lupain. Great service,
@@ -97,7 +98,7 @@ function Partners() {
                                 </div>
                                 <div className="item">
                                     <div className="quote">
-                                        <img src={sliderImg2} alt="" />
+                                        <img src={sliderImg2} alt="sliderImg" />
                                         Just back from our week in the 1 bed apartment we bought at Victoria
                                         Court and just like to thank all at Lupain Tenerife Estate Agents for
                                         everything,
@@ -123,7 +124,7 @@ function Partners() {
                                 </div>
                                 <div className="item">
                                     <div className="quote">
-                                        <img src={sliderImg4} alt="" />
+                                        <img src={sliderImg4} alt="sliderImg" />
                                         <p>Buying a property abroad can be a daunting experience so we were really
                                             pleased to have found Lupain Tenerife Estate Agents. We bought our off plan
                                             apartment a year ago and have received superb advice and support during
@@ -138,7 +139,7 @@ function Partners() {
                                 </div>
                                 <div className="item">
                                     <div className="quote">
-                                        <img src={sliderImg5} alt="" />
+                                        <img src={sliderImg5} alt="sliderImg" />
                                         <p>For so many years we have had a dream of having a small holiday home in
                                             Tenerife. We have come for our holidays for nearly 20 years, and at
                                             last we have bought our lovely apartment. We found the Lupain staff so
@@ -197,7 +198,7 @@ function Partners() {
                                 </div>
                                 <div className="item">
                                     <div className="quote">
-                                        <img src={sliderImg1} alt="" />
+                                        <img src={sliderImg1} alt="sliderImg" />
                                         <p>After visiting several agents we found HomeTenerife the only one which
                                             did not push us into buying. Their explaination of all the points we
                                             asked and were helpful in every way and guided us through the buying
@@ -232,7 +233,7 @@ function Partners() {
                                 </div>
                                 <div className="item">
                                     <div className="quote">
-                                        <img src={sliderImg2} alt="" />
+                                        <img src={sliderImg2} alt="sliderImg" />
                                         You arranged your schedule so that you could meet with me for the short
                                         period I would be visiting in order to find a home. You assessed my
                                         needs and desires and showed me many suitable properties. You were very
@@ -256,7 +257,7 @@ function Partners() {
                                 </div>
                                 <div className="item">
                                     <div className="quote">
-                                        <img src={sliderImg3}alt="" />
+                                        <img src={sliderImg3}alt="sliderImg" />
                                         Since I started renting the apartment out in May, apart from about 4
                                         weeks, I will have had full occupancy until beginning of Dec. It is also
                                         fully booked between mid Jan until end of Mar 07 and also for several
@@ -278,7 +279,7 @@ function Partners() {
                                 </div>
                                 <div className="item">
                                     <div className="quote">
-                                        <img src={sliderImg5} alt="" />
+                                        <img src={sliderImg5} alt="sliderImg" />
                                         Lupain Tenerife Estate Agents are the only estate agent we have used that sent
                                         us a
                                         monthly newsletter with properties matching our requirements that where
@@ -364,7 +365,7 @@ function Partners() {
                                 would not otherwise have been able to afford it.
 
                             </p>
-                            <a href="/property-investments-in-tenerife" className="readmore btn">Read More</a>
+                            <Link to="/property-investments-in-tenerife" className="readmore btn">Read More</Link>
                         </div>
                         <div className="post">
                             <h4>Apartments for sale in Tenerife</h4>
@@ -396,7 +397,7 @@ function Partners() {
                                 when they are not in use in order to offset some of the initial purchase price buy
                                 making the property almost pay for itself.
                             </p>
-                            <a href="/apartments-for-sale-in-tenerife" className="readmore btn">Read More</a>
+                            <Link to="/apartments-for-sale-in-tenerife" className="readmore btn">Read More</Link>
                         </div>
                         <div className="post">
                             <h4>Villas for sale in Tenerife</h4>
@@ -408,7 +409,7 @@ function Partners() {
                                 furnished. Most of the people look for luxurious villas on the hills above the most
                                 active and touristic areas because, apart from the innovative elegant and modern design,
                                 they also offer amazingly beautiful views over the ocean.</p>
-                            <a href="/villas-for-sale-in-tenerife" className="readmore btn">Read More</a>
+                            <Link to="/villas-for-sale-in-tenerife" className="readmore btn">Read More</Link>
                         </div>
 
                     </div>
@@ -420,42 +421,42 @@ function Partners() {
 
                     <div className="logos">
                         <p className="logo">
-                            <a title="Zona Comercial Abierta Los Cristianos"
-                                href="http://www.siecan.org/index.php?option=com_content&view=article&id=415&Itemid=177&lang=es"
-                                target="_blank" rel="nofollow"><img
+                            <Link title="Zona Comercial Abierta Los Cristianos"
+                                to="/"
+                                 rel="nofollow"><img
                                     title="Lupain Tenerife Estate Agents tenerife zona abierta los cristianos"
                                     alt="Lupain Tenerife Estate Agents tenerife zona abierta los cristianos"
-                                    src={Partners1} /></a>
+                                    src={Partners1} /></Link>
                         </p>
-                        <p className="logo" style={{ textAlign: "justify" }}><a
+                        <p className="logo" style={{ textAlign: "justify" }}><Link
                             title="Rightmove - Lupain Tenerife Estate Agents Tenerife Listings"
-                            href="http://www.rightmove.co.uk/overseas-property/estate-agents/Lupain-Properties-SL/Tenerife-118678.html"
-                            target="_blank" rel="nofollow"><img
+                            to="/"
+                             rel="nofollow"><img
                                 title="Lupain Tenerife Estate Agents tenerife rightmove partner"
                                 alt="Lupain Tenerife Estate Agents tenerife rightmove partner"
-                                src={Partners2} /></a>
+                                src={Partners2} /></Link>
                         </p>
-                        <p className="logo" style={{ textAlign: "justify" }}><a
+                        <p className="logo" style={{ textAlign: "justify" }}><Link
                             title="Zoopla - Tenerife Property Sales Listings"
-                            href="http://www.zoopla.co.uk/overseas/branch/lupain-properties-s-l-66507/"
-                            target="_blank" rel="nofollow"><img
+                            to="/"
+                             rel="nofollow"><img
                                 title="Lupain Tenerife Estate Agents los cristianos tenerife zoopla partner"
                                 alt="Lupain Tenerife Estate Agents los cristianos tenerife zoopla partner"
-                                src={Partners3} /></a>
+                                src={Partners3} /></Link>
                         </p>
-                        <p className="logo" style={{ textAlign: "justify" }}><a
+                        <p className="logo" style={{ textAlign: "justify" }}><Link
                             title="Primelocation - Los Cristianos Property Sales Listings"
-                            href="http://www.primelocation.com/overseas/branch/lupain-properties-s-l-66507/"
-                            target="_blank" rel="nofollow"><img
+                            to="/"
+                             rel="nofollow"><img
                                 title="Lupain Tenerife Estate Agents tenerife primelocation partner"
                                 alt="Lupain Tenerife Estate Agents tenerife primelocation partner"
-                                src={Partners4} /></a>
+                                src={Partners4} /></Link>
                         </p>
-                        <p className="logo" style={{ textAlign: "justify" }}><a
+                        <p className="logo" style={{ textAlign: "justify" }}><Link
                             title="Lupain Tenerife Estate Agents - Los Cristianos property sales listings"
-                            href="http://www.kyero.com/browse/spain-property-for-sale-agt570pag1ppp20slt0srt4"
+                            to="/"
                             rel="nofollow"><img alt="tenerife property sales by kyero"
-                                src={Partners5} /></a>
+                                src={Partners5} /></Link>
                         </p>
                     </div>
 
