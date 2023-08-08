@@ -8,21 +8,22 @@ import It from "../images/IT-min.png";
 import Nl from "../images/NL-min.png";
 import Sv from "../images/SV-min.png";
 import Logo from "../images/logo-new.png";
-import { useState } from "react";
+// import { useState } from "react";
 
 
-function Header() {
+function Header(props) {
+    console.log("props",props.currency);
 
-    const [currency, setCurrency] = useState("€");
-    const setCurrencyEuro=()=>{
-        setCurrency("€");
-    }
-    const setCurrencyDollar=()=>{
-        setCurrency("$");
-    }
-    const setCurrencyPound=()=>{
-        setCurrency("£");
-    }
+    // const [currency, setCurrency] = useState("€");
+    // const setCurrencyEuro=()=>{
+    //     setCurrency("€");
+    // }
+    // const setCurrencyDollar=()=>{
+    //     setCurrency("$");
+    // }
+    // const setCurrencyPound=()=>{
+    //     setCurrency("£");
+    // }
     return (
         <header>
         
@@ -71,10 +72,10 @@ function Header() {
                         <Link to="/account" className="btn user"><i className="fa fa-user"></i></Link>
                         {" "} <form action="" method="post" className="btn currency-selector">
                             <input id="currency-select" type="hidden" name="currency" />
-                            <Link className="btn currency active" data-id="1" to="/">{currency}</Link>
-                            <Link className="btn currency " onClick={setCurrencyEuro} data-id="1" to="/">€</Link>
-                            <Link className="btn currency " onClick={setCurrencyDollar} data-id="2" to="/">$</Link>
-                            <Link className="btn currency " onClick={setCurrencyPound} data-id="3" to="/">£</Link>
+                            <Link className="btn currency active" data-id="1" to="/">{props.currency}</Link>
+                            <Link className="btn currency " onClick={props.setCurrencyEuro} data-id="1" to="/">€</Link>
+                            <Link className="btn currency " onClick={props.setCurrencyDollar} data-id="2" to="/">$</Link>
+                            <Link className="btn currency " onClick={props.setCurrencyPound} data-id="3" to="/">£</Link>
                         </form>
                         {" "}<Link to="/free-property-valuation" className="btn book">
                             <span style={{ lineHeight: "1.1em", fontSize: "0.9em" }}>Selling?<br />Book A FREE Valuation</span>

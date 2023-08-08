@@ -11,18 +11,31 @@ import Help from './Components/Help';
 import Locations from './Components/Locations';
 import FeaturedProperties from './Components/FeaturedPorperties';
 import MobileMenus from './Components/MobileMenus';
+import { useState } from 'react';
 
 
 function App() {
+  const [currency, setCurrency] = useState("€");
+  const setCurrencyEuro=()=>{
+      setCurrency("€");
+  }
+  const setCurrencyDollar=()=>{
+      setCurrency("$");
+  }
+  const setCurrencyPound=()=>{
+      setCurrency("£");
+  }
+
+
   return (
     <>
       <MobileMenus />
-      <Header />
+      <Header currency={currency} setCurrencyDollar={setCurrencyDollar} setCurrencyEuro={setCurrencyEuro} setCurrencyPound={setCurrencyPound}/>
       <HeroSearch />
-      <FeaturedProperties />
+      <FeaturedProperties currency={currency} />
       <Locations />
       <Help />
-      <LatestProperties />
+      <LatestProperties currency={currency} />
       <About />
       <WhyUseLupain />
       <Partners />

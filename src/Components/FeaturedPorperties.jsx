@@ -13,7 +13,8 @@ import featuredImg12 from "../images/thumb_3279_610321cc176de8e8af46b1b0907567ed
 import OwlCarousel from 'react-owl-carousel';
 import { Link } from "react-router-dom"
 
-function FeaturedProperties() {
+function FeaturedProperties(props) {
+
     const options = {
         items: 4,
         nav: true,
@@ -45,18 +46,18 @@ function FeaturedProperties() {
             <div className="wrapper">
 
 
-                <h1 className="text-centered">Lupain - Tenerife Estate Agents</h1>
+                <h1 className="text-centered">Lupain - Tenerife Estate Agents </h1>
                 <h2 className="lined">Featured Tenerife Properties</h2>
 
                 <div className="featured-slider" itemProp="image" itemScope
                     itemType="http://schema.org/RealEstateAgent http://schema.org/Product http://schema.org/Offer">
-                    <OwlCarousel margin={30} {...options}>
+                    <OwlCarousel margin={30} {...options} key={props.currency} >
                         <div className="item">
                             <Link className="propprev"
                                 to="/property/studio-apartment-in-royal-palm-complex-for-sale-in-los-cristianos-lp0622">
                                 <h3 itemProp='name address'>Studio Apartment in Royal Palm Complex for sale in Los
-                                    Cristianos LP0622</h3>
-                                <div className="price">€189,000</div>
+                                    Cristianos LP0622  </h3>
+                                <div className="price">{props.currency}189,000</div>
                                 <div itemProp="price priceRange" style={{ display: "none" }}>189000.00</div>
                                 <div itemProp="telephone" style={{ display: "none" }}>+34 922 79 65 27</div>
                                 <div itemProp="priceCurrency" style={{ display: "none" }}>EUR</div>
@@ -67,7 +68,7 @@ function FeaturedProperties() {
                         <div className="item">
                             <Link className="propprev" to="/property/2-bedroom-in-atlantico-i-lp23449">
                                 <h3 itemProp='name address'>2 bedroom in Atlantico I LP23449</h3>
-                                <div className="price">€147,500</div>
+                                <div className="price">{props.currency}147,500</div>
                                 <div itemProp="price priceRange" style={{ display: "none" }}>147500.00</div>
                                 <div itemProp="telephone" style={{ display: "none" }}>+34 922 79 65 27</div>
                                 <div itemProp="priceCurrency" style={{ display: "none" }}>EUR</div>
@@ -80,7 +81,7 @@ function FeaturedProperties() {
                                 to="/property/2-bedroom-apartment-in-achacay-complex-for-sale-in-los-cristianos-lp23203">
                                 <h3 itemProp='name address'>2 Bedroom Apartment In Achacay Complex For Sale In Los
                                     Cristianos LP23203</h3>
-                                <div className="price">€315,000</div>
+                                <div className="price">{props.currency}315,000</div>
                                 <div itemProp="price priceRange" style={{ display: "none" }}>315000.00</div>
                                 <div itemProp="telephone" style={{ display: "none" }}>+34 922 79 65 27</div>
                                 <div itemProp="priceCurrency" style={{ display: "none" }}>EUR</div>
@@ -92,7 +93,7 @@ function FeaturedProperties() {
                                 to="/property/2-bedroom-apartment-in-parque-tropical-ii-complex-for-sale-in-los-cristianos-lp23095">
                                 <h3 itemProp='name address'>2 Bedroom Apartment In Parque Tropical II Complex For Sale In
                                     Los Cristianos LP23095</h3>
-                                <div className="price">€349,000</div>
+                                <div className="price">{props.currency}349,000</div>
                                 <div itemProp="price priceRange" style={{ display: "none" }}>349000.00</div>
                                 <div itemProp="telephone" style={{ display: "none" }}>+34 922 79 65 27</div>
                                 <div itemProp="priceCurrency" style={{ display: "none" }}>EUR</div>
@@ -104,7 +105,7 @@ function FeaturedProperties() {
                                 to="/property/1-bedroom-apartmen-in-beverly-hills-club-complex-for-sale-in-los-cristianos-lp12374">
                                 <h3 itemProp='name address'>1 Bedroom Apartmen in Beverly Hills Club Complex For Sale In Los
                                     Cristianos LP12374</h3>
-                                <div className="price">€148,400</div>
+                                <div className="price">{props.currency}148,400</div>
                                 <div itemProp="price priceRange" style={{ display: "none" }}>148400.00</div>
                                 <div itemProp="telephone" style={{ display: "none" }}>+34 922 79 65 27</div>
                                 <div itemProp="priceCurrency" style={{ display: "none" }}>EUR</div>
@@ -116,7 +117,7 @@ function FeaturedProperties() {
                                 to="/property/lpr6-fantastic-luxury-studio-sea-and-sunset-views-holiday-rental">
                                 <h3 itemProp='name address'>LPR6 - Fantastic Luxury Studio Sea And Sunset Views. Holiday
                                     Rental</h3>
-                                <div className="price">€320</div>
+                                <div className="price">{props.currency}320</div>
                                 <div itemProp="price priceRange" style={{ display: "none" }}>320.00</div>
                                 <div itemProp="telephone" style={{ display: "none" }}>+34 922 79 65 27</div>
                                 <div itemProp="priceCurrency" style={{ display: "none" }}>EUR</div>
@@ -128,7 +129,7 @@ function FeaturedProperties() {
                                 to="/property/lpr2-los-cristianos-4-bed-luxury-triplex-villa-holiday-rental">
                                 <h3 itemProp='name address'>LPR2 - Los Cristianos 4 Bed Luxury Triplex Villa Holiday Rental
                                 </h3>
-                                <div className="price">€640</div>
+                                <div className="price">{props.currency}640</div>
                                 <div itemProp="price priceRange" style={{ display: "none" }}>640.00</div>
                                 <div itemProp="telephone" style={{ display: "none" }}>+34 922 79 65 27</div>
                                 <div itemProp="priceCurrency" style={{ display: "none" }}>EUR</div>
@@ -140,7 +141,7 @@ function FeaturedProperties() {
                                 to="/property/lpr5-los-cristianos-terrace-bungalow-great-location-holiday-rental">
                                 <h3 itemProp='name address'>LPR5 - Los Cristianos Terrace Bungalow. Great Location, Holiday
                                     Rental</h3>
-                                <div className="price">€410</div>
+                                <div className="price">{props.currency}410</div>
                                 <div itemProp="price priceRange" style={{ display: "none" }}>410.00</div>
                                 <div itemProp="telephone" style={{ display: "none" }}>+34 922 79 65 27</div>
                                 <div itemProp="priceCurrency" style={{ display: "none" }}>EUR</div>
@@ -150,7 +151,7 @@ function FeaturedProperties() {
                         <div className="item">
                             <Link className="propprev" to="/property/lpr1-la-caleta-luxury-penthouse-duplex-holiday-rental">
                                 <h3 itemProp='name address'>LPR1 - La Caleta Luxury Penthouse Duplex Holiday Rental</h3>
-                                <div className="price">€640</div>
+                                <div className="price">{props.currency}640</div>
                                 <div itemProp="price priceRange" style={{ display: "none" }}>640.00</div>
                                 <div itemProp="telephone" style={{ display: "none" }}>+34 922 79 65 27</div>
                                 <div itemProp="priceCurrency" style={{ display: "none" }}>EUR</div>
@@ -160,7 +161,7 @@ function FeaturedProperties() {
                         <div className="item">
                             <Link className="propprev" to="/property/4-bed-villa-in-san-eugenio-for-sale-in-adeje-lp4235">
                                 <h3 itemProp='name address'>4 bed villa in San Eugenio for sale in Adeje LP4235</h3>
-                                <div className="price">€682,500</div>
+                                <div className="price">{props.currency}682,500</div>
                                 <div itemProp="price priceRange" style={{ display: "none" }}>682500.00</div>
                                 <div itemProp="telephone" style={{ display: "none" }}>+34 922 79 65 27</div>
                                 <div itemProp="priceCurrency" style={{ display: "none" }}>EUR</div>
@@ -172,7 +173,7 @@ function FeaturedProperties() {
                                 to="/property/2-bed-apartment-in-the-residential-maria-jose-complex-for-sale-in-los-cristianos-lp22428">
                                 <h3 itemProp='name address'>2 bed apartment in the residential Maria Jose complex for sale
                                     in Los Cristianos LP22428</h3>
-                                <div className="price">€167,500</div>
+                                <div className="price">{props.currency}167,500</div>
                                 <div itemProp="price priceRange" style={{ display: "none" }}>167500.00</div>
                                 <div itemProp="telephone" style={{ display: "none" }}>+34 922 79 65 27</div>
                                 <div itemProp="priceCurrency" style={{ display: "none" }}>EUR</div>
@@ -184,7 +185,7 @@ function FeaturedProperties() {
                                 to="/property/3-bed-apartment-with-port-views-on-the-colina-i-complex-for-sale-in-los-cristianos-lp3866">
                                 <h3 itemProp='name address'>3 bed apartment with port views on the Colina I complex for sale
                                     in Los Cristianos LP3866</h3>
-                                <div className="price">€472,500</div>
+                                <div className="price">{props.currency}472,500</div>
                                 <div itemProp="price priceRange" style={{ display: "none" }}>472500.00</div>
                                 <div itemProp="telephone" style={{ display: "none" }}>+34 922 79 65 27</div>
                                 <div itemProp="priceCurrency" style={{ display: "none" }}>EUR</div>
