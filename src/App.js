@@ -1,44 +1,39 @@
-
+// import { useEffect } from 'react';
+import React from 'react';
 import './global.css';
 import Header from './Components/Header';
-import HeroSearch from './Components/HeroSearch';
 import Footer from './Components/Footer';
-import Partners from './Components/Partners';
-import About from './Components/About';
-import WhyUseLupain from './Components/WhyUseLupain';
-import LatestProperties from './Components/LatestProperties';
-import Help from './Components/Help';
-import Locations from './Components/Locations';
-import FeaturedProperties from './Components/FeaturedPorperties';
 import MobileMenus from './Components/MobileMenus';
 import { useState } from 'react';
+import Blog from './pages/Blog';
+import Home from './pages/Home';
+import { Route, Routes } from 'react-router-dom';
+import Services_FreeValuation from './pages/Services_FreeValuation';
+import Services_Affiliateprogram from './pages/Services_Affiliateprogram';
 
 
 function App() {
   const [currency, setCurrency] = useState("€");
-  const setCurrencyEuro=()=>{
-      setCurrency("€");
+  const setCurrencyEuro = () => {
+    setCurrency("€");
   }
-  const setCurrencyDollar=()=>{
-      setCurrency("$");
+  const setCurrencyDollar = () => {
+    setCurrency("$");
   }
-  const setCurrencyPound=()=>{
-      setCurrency("£");
+  const setCurrencyPound = () => {
+    setCurrency("£");
   }
-
 
   return (
     <>
       <MobileMenus />
-      <Header currency={currency} setCurrencyDollar={setCurrencyDollar} setCurrencyEuro={setCurrencyEuro} setCurrencyPound={setCurrencyPound}/>
-      <HeroSearch />
-      <FeaturedProperties currency={currency} />
-      <Locations />
-      <Help />
-      <LatestProperties currency={currency} />
-      <About />
-      <WhyUseLupain />
-      <Partners />
+      <Header currency={currency} setCurrencyDollar={setCurrencyDollar} setCurrencyEuro={setCurrencyEuro} setCurrencyPound={setCurrencyPound} />
+      <Routes>
+          <Route index element={<Home currency={currency} />} />
+          <Route path="/blog" element= {<Blog/>}/>
+          <Route path="/services_freevaluation" element= {<Services_FreeValuation/>}/>
+          <Route path="/services_affiliateprogram" element= {<Services_Affiliateprogram/>}/>
+      </Routes>
       <Footer />
     </>
   );

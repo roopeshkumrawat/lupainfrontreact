@@ -7257,3 +7257,18 @@ aside .g-recaptcha iframe {
 .displayNone{
     display: none;
 }
+
+/* mobilemenu css  */
+.slicknav_parent .dropdown{
+    display: none;
+}
+.slicknav_parent.slicknav_open > .dropdown {
+	display: block !important;
+
+}
+.slicknav_parent .slicknav_arrow {
+	transition:  transform .5s ease;
+}
+.slicknav_parent.slicknav_open > .slicknav_item > .slicknav_arrow {
+	transform: rotateZ(90deg);
+}

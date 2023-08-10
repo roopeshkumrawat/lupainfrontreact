@@ -1,5 +1,4 @@
-
-import {Link}  from "react-router-dom";
+import { Link } from "react-router-dom";
 import EN from '../images/EN-min.png';
 import Es from "../images/ES-min.png";
 import De from "../images/DE-min.png";
@@ -8,25 +7,11 @@ import It from "../images/IT-min.png";
 import Nl from "../images/NL-min.png";
 import Sv from "../images/SV-min.png";
 import Logo from "../images/logo-new.png";
-// import { useState } from "react";
-
 
 function Header(props) {
-    console.log("props",props.currency);
-
-    // const [currency, setCurrency] = useState("€");
-    // const setCurrencyEuro=()=>{
-    //     setCurrency("€");
-    // }
-    // const setCurrencyDollar=()=>{
-    //     setCurrency("$");
-    // }
-    // const setCurrencyPound=()=>{
-    //     setCurrency("£");
-    // }
     return (
         <header>
-        
+
             <div className="wrapper">
 
                 <div className="units-row top">
@@ -61,7 +46,7 @@ function Header(props) {
                 <div className="units-row end">
 
                     <div className='unit-30 inline-block'>
-                        <Link to="" className="fl logo end">
+                        <Link to="/" className="fl logo end">
                             <img className='padding-top-10' src={Logo} alt="" />
                         </Link>
                     </div>
@@ -134,10 +119,10 @@ function Header(props) {
                             </ul>
                         </li>
 
-                        <li className=""><Link to="#">Services</Link>
+                        <li className=""><Link to="/">Services</Link>
                             <ul className="dropdown">
-                                <li><Link to="/free-property-valuation">Book A FREE Valuation</Link></li>
-                                <li><Link to="/affiliate-program">Affiliate Program</Link></li>
+                                <li><Link to="/services_freevaluation">Book A FREE Valuation</Link></li>
+                                <li><Link to="/services_affiliateprogram">Affiliate Program</Link></li>
                             </ul>
                         </li>
 

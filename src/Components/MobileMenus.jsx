@@ -1,25 +1,57 @@
 import burgerIcon from "../images/burger.png";
 import { Link } from "react-router-dom";
+import React, { useEffect } from 'react';
+
 
 function myFunction() {
     var element = document.getElementById("slicknav_nav");
     element.classList.toggle("displayBlock");
 }
+function displayNone() {
+    document.getElementById("topBar").classList.add("displayNone");
+
+}
+
+function toggleMobileInnerLinks0() {
+    var element = document.getElementsByClassName("slicknav_parent")[0];
+    element.classList.toggle("slicknav_open");
+    element.classList.toggle("slicknav_collapsed");
+}
+function toggleMobileInnerLinks1() {
+    var element = document.getElementsByClassName("slicknav_parent")[1];
+    element.classList.toggle("slicknav_open");
+    element.classList.toggle("slicknav_collapsed");
+}
+function toggleMobileInnerLinks2() {
+    var element = document.getElementsByClassName("slicknav_parent")[2];
+    element.classList.toggle("slicknav_open");
+    element.classList.toggle("slicknav_collapsed");
+}
+function toggleMobileInnerLinks3() {
+    var element = document.getElementsByClassName("slicknav_parent")[3];
+    element.classList.toggle("slicknav_open");
+    element.classList.toggle("slicknav_collapsed");
+}
+function toggleMobileInnerLinks4() {
+    var element = document.getElementsByClassName("slicknav_parent")[4];
+    element.classList.toggle("slicknav_open");
+    element.classList.toggle("slicknav_collapsed");
+}
+function toggleMobileInnerLinks5() {
+    var element = document.getElementsByClassName("slicknav_parent")[5];
+    element.classList.toggle("slicknav_open");
+    element.classList.toggle("slicknav_collapsed");
+}
 
 
 function MobileMenus() {
-    function displayNone(){
-        document.getElementById("topBar").classList.add("displayNone");
-
-    }
-
     return (
         <>
-            <div class="cc_banner-wrapper " id="topBar">
-                <div class="cc_banner cc_container cc_container--open">
-                    <span  onClick={displayNone} class="cc_btn cc_btn_accept_all">Got it!</span>
-                    <p class="cc_message">This wsebsite uses cookies to ensure you get the best experience on our website </p>
-                    {/* <a class="cc_logo" target="_blank" href="">Cookie Consent plugin for the EU cookie law</a> */}
+            <div className="cc_banner-wrapper " id="topBar">
+                <div className="cc_banner cc_container cc_container--open">
+                    <span onClick={displayNone} className="cc_btn cc_btn_accept_all">Got it!</span>
+                    <p className="cc_message">This wsebsite uses cookies to ensure you get the best experience on our website </p>
+                    {/* <a className="cc_logo" target="_blank" href="">Cookie Consent plugin for the EU cookie law</a> */}
                 </div>
             </div>
 
@@ -34,9 +66,9 @@ function MobileMenus() {
                         <Link to="/" role="menuitem" tabIndex="0">Home</Link>
                     </li>
 
-                    <li className="slicknav_collapsed slicknav_parent">
-                        <Link to="#" role="menuitem" aria-haspopup="true" tabIndex="0" className="slicknav_item slicknav_row" style={{ outline: 'none' }}>
-                            <Link to="/tenerife-properties-for-sale" tabIndex="0">Tenerife Properties</Link>
+                    <li   className="slicknav_collapsed slicknav_parent">
+                        <Link onClick={toggleMobileInnerLinks0} to="#" role="menuitem" aria-haspopup="true" tabIndex="0" className="slicknav_item slicknav_row" style={{ outline: 'none' }}>
+                            <Link to="/" tabIndex="0">Tenerife Properties</Link>
                             <span className="slicknav_arrow">►</span>
                         </Link>
                         <ul className="dropdown slicknav_hidden" role="menu" aria-hidden="true" style={{ display: 'none' }}>
@@ -51,8 +83,8 @@ function MobileMenus() {
                             <li className=""><Link to="/properties-for-sale?luxury=1" role="menuitem" tabIndex="0">Luxury</Link></li>
                         </ul>
                     </li>
-                    <li className="slicknav_collapsed slicknav_parent">
-                        <Link to="#" role="menuitem" aria-haspopup="true" tabIndex="0" className="slicknav_item slicknav_row" style={{ outline: 'none' }}>
+                    <li  className=" slicknav_collapsed slicknav_parent">
+                        <Link onClick={toggleMobileInnerLinks1} to="#" role="menuitem" aria-haspopup="true" tabIndex="0" className="slicknav_item slicknav_row" style={{ outline: 'none' }}>
                             <Link to="/sell-your-tenerife-property" tabIndex="0">Selling</Link>
                             <span className="slicknav_arrow">►</span>
                         </Link>
@@ -65,8 +97,8 @@ function MobileMenus() {
                     <li className="">
                         <Link to="/holiday-rentals-tenerife" role="menuitem" tabIndex="0">Rentals</Link>
                     </li>
-                    <li className="slicknav_collapsed slicknav_parent">
-                        <Link to="#" role="menuitem" aria-haspopup="true" tabIndex="0" className="slicknav_item slicknav_row" style={{ outline: 'none' }}>
+                    <li  className="slicknav_collapsed slicknav_parent">
+                        <Link onClick={toggleMobileInnerLinks2} to="#" role="menuitem" aria-haspopup="true" tabIndex="0" className="slicknav_item slicknav_row" style={{ outline: 'none' }}>
                             <Link to="/about-us" tabIndex="0">About Us</Link>
                             <span className="slicknav_arrow">►</span>
                         </Link>
@@ -76,11 +108,13 @@ function MobileMenus() {
                         </ul>
                     </li>
 
-                    <li className="slicknav_collapsed slicknav_parent"><Link to="#" role="menuitem" aria-haspopup="true" tabIndex="0" className="slicknav_item slicknav_row" style={{ outline: 'none' }}><Link to="#" tabIndex="0">Information</Link>
+                    <li  className="slicknav_collapsed slicknav_parent">
+                        <Link onClick={toggleMobileInnerLinks3} to="#" role="menuitem" aria-haspopup="true" tabIndex="0" className="slicknav_item slicknav_row" style={{ outline: 'none' }}><Link to="#" tabIndex="0">Information</Link>
                         <span className="slicknav_arrow">►</span></Link>
                         <ul className="dropdown slicknav_hidden" role="menu" aria-hidden="true" style={{ display: 'none' }}>
                             <li><Link to="/buying-property" role="menuitem" tabIndex="0">Buying Property</Link></li>
-                            <li className="slicknav_collapsed slicknav_parent"><Link to="#" role="menuitem" aria-haspopup="true" tabIndex="0" className="slicknav_item slicknav_row" style={{ outline: 'none' }}><Link to="/sell-your-tenerife-property" tabIndex="0">Selling Property</Link>
+                            <li  className="slicknav_collapsed slicknav_parent">
+                                <Link onClick={toggleMobileInnerLinks4} to="#" role="menuitem" aria-haspopup="true" tabIndex="0" className="slicknav_item slicknav_row" style={{ outline: 'none' }}><Link to="/sell-your-tenerife-property" tabIndex="0">Selling Property</Link>
                                 <span className="slicknav_arrow">►</span></Link>
                                 <ul className="dropdown slicknav_hidden" role="menu" aria-hidden="true" style={{ display: 'none' }}>
                                     <li><Link to="/private-seller" role="menuitem" tabIndex="0">Private Seller</Link></li>
@@ -93,8 +127,8 @@ function MobileMenus() {
                         </ul>
                     </li>
 
-                    <li className="slicknav_collapsed slicknav_parent">
-                        <Link to="#" role="menuitem" aria-haspopup="true" tabIndex="0" className="slicknav_item slicknav_row" style={{ outline: 'none' }}>
+                    <li  className="slicknav_collapsed slicknav_parent">
+                        <Link onClick={toggleMobileInnerLinks5} to="#" role="menuitem" aria-haspopup="true" tabIndex="0" className="slicknav_item slicknav_row" style={{ outline: 'none' }}>
                             <Link to="#" tabIndex="0">Services</Link>
                             <span className="slicknav_arrow">►</span>
                         </Link>
