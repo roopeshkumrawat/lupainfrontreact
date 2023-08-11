@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
-function EnquiryBox() {
+function EnquiryBox(props) {
     return (
         <>
             <aside className="unit-30">
                 <div className="enquiry box">
                     <Link name="contact"></Link>
-                    <h3>Contact Us</h3>
+                    <h3>{props.formHeading}</h3>
 
                     <div className="inner">
                         <form method="post" action="/_includes/_functions/email_handler.php" className="form" id="contactForm" noValidate="novalidate">
@@ -50,4 +50,8 @@ function EnquiryBox() {
         </>
     )
 }
+
+EnquiryBox.defaultProps = {
+    formHeading: 'Contact Us',
+  };
 export default EnquiryBox;

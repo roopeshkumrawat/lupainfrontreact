@@ -3,7 +3,6 @@ import affiliateProgramImg from '../images/affiliate.jpg'
 function Services_Affiliateprogram() {
     return (
         <section class="selling">
-
             <div class="wrapper units-row">
                 <div class="content unit-70">
                     <img src={affiliateProgramImg} alt="img" />

@@ -10,7 +10,7 @@ import blogImg8 from "../images/thumb_70a9544d3d2316cabc5e92c504df13c5.jpg"
 import blogImg9 from "../images/thumb_3745607a8e2e10aa9245c0b2c430f801.jpeg"
 import blogImg10 from "../images/thumb_eb7666f97050df03707a2ebeb4038e87.jpg"
 import EnquiryBox from "../Components/globalComponents/EnquiryBox";
-function Blog() {
+function Blog(porps) {
     return (
         <>
             <section className="blog">
@@ -132,7 +132,7 @@ function Blog() {
 
 
                     </div>
-                    <EnquiryBox />
+                    <EnquiryBox formHeading={porps.formHeading} />
 
                 </div>
 

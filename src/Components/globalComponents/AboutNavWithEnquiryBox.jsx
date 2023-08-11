@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom"
-function AboutNavWithEnquiryBox() {
+function AboutNavWithEnquiryBox(props) {
     return (
         <aside className="unit-30">
 
@@ -16,7 +16,7 @@ function AboutNavWithEnquiryBox() {
             </ul>
             <div className="enquiry box">
                 <Link name="contact"></Link>
-                <h3>Contact Us</h3>
+                <h3>{props.formHeading}</h3>
 
                 <div className="inner">
                     <form method="post" action="/_includes/_functions/email_handler.php" className="form" id="contactForm">
@@ -32,13 +32,13 @@ function AboutNavWithEnquiryBox() {
                         <label>Your Message</label>
                         <textarea name="message" placeholder="Your Message"></textarea>
 
-                        <div>
+                        {/* <div>
                             <img id="captcha" src="/securimage/securimage_show.php" alt="CAPTCHA Image" />
                             <Link to="#" onclick="document.getElementById('captcha').src = '/securimage/securimage_show.php?' + Math.random(); return false" style={{ fontSize: "30px", fontWeight: "bold", position: "relative", top: "-14px" }}><span style={{ color: "#fff" }}>↺</span></Link>
-                        </div>
+                        </div> */}
 
                         <label>Enter code</label>
-                        <input type="text" name="captcha_code" autocomplete="new-captcha" size="10" maxlength="6" required="" />
+                        <input type="text" name="captcha_code" autoComplete="new-captcha" size="10" maxLength="6" required="" />
 
 
                         <input type="hidden" name="subject" value="Contact Form Enquiry" />
@@ -60,4 +60,10 @@ function AboutNavWithEnquiryBox() {
 
     )
 }
+
+AboutNavWithEnquiryBox.defaultProps = {
+    formHeading: 'Contact Us',
+  };
+
+  
 export default AboutNavWithEnquiryBox;

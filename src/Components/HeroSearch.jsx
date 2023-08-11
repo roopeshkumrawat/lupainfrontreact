@@ -282,13 +282,13 @@ function HeroSearch() {
 
 
     const [dream, setDream] = useState(location);
-    const setComplexName = () =>{
+    const setComplexName = () => {
         setDream(complexName)
     }
-    const setProperties = () =>{
+    const setProperties = () => {
         setDream(properties)
     }
-    const setLocation = () =>{
+    const setLocation = () => {
         setDream(location)
     }
 
@@ -345,11 +345,13 @@ function HeroSearch() {
                                 <Link to="/properties-for-sale?luxury=1">Luxury</Link>
                             </li>
                             {" "}<li>
-                                <Link to="/sell-your-tenerife-property">Selling</Link>
+                                <Link to="/selling">Selling</Link>
                             </li>
-                            {" "}<li>
-                                <Link to="/contact">Contact</Link>
+                            {" "}
+                            <li>
+                                <Link to="/contact"> contact </Link>
                             </li>
+                           
                         </ul>
                     </div>
 

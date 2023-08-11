@@ -54,27 +54,24 @@ function Header(props) {
                         <Link className="tel" to="tel:+34 922 796 527">Call Today +34 922 796 527</Link>
                     </div>
                     <div className="unit-35 buttons">
-                        <Link to="/account" className="btn user"><i className="fa fa-user"></i></Link>
+                        <Link to="#" className="btn user"><i className="fa fa-user"></i></Link>
                         {" "} <form action="" method="post" className="btn currency-selector">
                             <input id="currency-select" type="hidden" name="currency" />
-                            <Link className="btn currency active" data-id="1" to="/">{props.currency}</Link>
-                            <Link className="btn currency " onClick={props.setCurrencyEuro} data-id="1" to="/">€</Link>
-                            <Link className="btn currency " onClick={props.setCurrencyDollar} data-id="2" to="/">$</Link>
-                            <Link className="btn currency " onClick={props.setCurrencyPound} data-id="3" to="/">£</Link>
+                            <Link className="btn currency active" data-id="1" to="#">{props.currency}</Link>
+                            <Link className="btn currency " onClick={props.setCurrencyEuro} data-id="1" to="#">€</Link>
+                            <Link className="btn currency " onClick={props.setCurrencyDollar} data-id="2" to="#">$</Link>
+                            <Link className="btn currency " onClick={props.setCurrencyPound} data-id="3" to="#">£</Link>
                         </form>
-                        {" "}<Link to="/free-property-valuation" className="btn book">
+                        {" "}<Link to="/services_freevaluation" className="btn book">
                             <span style={{ lineHeight: "1.1em", fontSize: "0.9em" }}>Selling?<br />Book A FREE Valuation</span>
                         </Link>
                     </div>
-
                 </div>
-
             </div>
             <div className="navbox">
                 <nav className="wrapper">
                     <ul className="fullwidth">
                         <li className=""><Link to="/">Home</Link></li>
-
                         <li className=""><Link to="/tenerife-properties-for-sale">Tenerife Properties</Link>
                             <ul className="dropdown">
                                 <li className=""><Link to="/los-cristianos-properties-for-sale">Los Cristianos Properties</Link>
@@ -90,13 +87,13 @@ function Header(props) {
                                 <li className=""><Link to="/properties-for-sale?luxury=1">Luxury</Link></li>
                             </ul>
                         </li>
-                        <li className=""><Link to="/sell-your-tenerife-property">Selling</Link>
+                        <li className=""><Link to="/selling">Selling</Link>
                             <ul className="dropdown">
-                                <li><Link to="/free-property-valuation">Book A FREE Valuation</Link></li>
+                                <li><Link to="/services_freevaluation">Book A FREE Valuation</Link></li>
                             </ul>
                         </li>
-                        <li className=""><Link to="/holiday-rentals-tenerife">Rentals</Link></li>
-                        <li className=""><Link to="/about-us">About Us</Link>
+                        <li className=""><Link to="/rental">Rentals</Link></li>
+                        <li className=""><Link to="/about">About Us</Link>
                             <ul className="dropdown">
                                 <li><Link to="/history-of-lupain">History of Lupain</Link></li>
                                 <li><Link to="/testimonials">Testimonials</Link></li>
@@ -119,7 +116,7 @@ function Header(props) {
                             </ul>
                         </li>
 
-                        <li className=""><Link to="/">Services</Link>
+                        <li className=""><Link to="#">Services</Link>
                             <ul className="dropdown">
                                 <li><Link to="/services_freevaluation">Book A FREE Valuation</Link></li>
                                 <li><Link to="/services_affiliateprogram">Affiliate Program</Link></li>

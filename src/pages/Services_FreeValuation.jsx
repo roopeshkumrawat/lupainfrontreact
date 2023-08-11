@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import sellingHomeImg from "../images/da166bb6923cb96f1a9824ede184b718.jpg"
 import AboutNavWithEnquiryBox from "../Components/globalComponents/AboutNavWithEnquiryBox";
-function Services_FreeValuation() {
+function Services_FreeValuation(props) {
     return (
         <section className="page">
 
@@ -61,7 +61,7 @@ function Services_FreeValuation() {
                     </div>
                 </div>
 
-                <AboutNavWithEnquiryBox />
+                <AboutNavWithEnquiryBox formHeading={props.formHeading} />
             </div>
 
         </section>
