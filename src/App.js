@@ -1,4 +1,4 @@
-// import { useEffect } from 'react';
+import { useEffect } from 'react';
 import React from 'react';
 import './global.css';
 import Header from './Components/Header';
@@ -17,6 +17,28 @@ import AboutUs from './pages/AboutUs';
 
 
 function App() {
+  const googleTranslateElementInit = () => {
+    new window.google.translate.TranslateElement(
+      {
+        pageLanguage: "en",
+        layout: window.google.translate.TranslateElement.FloatPosition.TOP_LEFT,
+      },
+      "google_translate_element"
+    );
+  };
+
+  useEffect(() => {
+    var addScript = document.createElement("script");
+    addScript.setAttribute(
+      "src",
+      "//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+    );
+    document.body.appendChild(addScript);
+    window.googleTranslateElementInit = googleTranslateElementInit;
+  }, []);
+
+
+
   const [currency, setCurrency] = useState("€");
   const setCurrencyEuro = () => {
     setCurrency("€");
@@ -30,17 +52,18 @@ function App() {
 
   return (
     <>
+      <div id="google_translate_element DisplayGoogleTranslate"></div>
       <MobileMenus />
       <Header currency={currency} setCurrencyDollar={setCurrencyDollar} setCurrencyEuro={setCurrencyEuro} setCurrencyPound={setCurrencyPound} />
       <Routes>
-          <Route index element={<Home currency={currency} />} />
-          <Route path="/selling" element= {<Selling />}/>
-          <Route path="/rental" element= {<Rental  formHeading="General Enquiry" currency={currency} />}/>
-          <Route path="/about" element= {<AboutUs/>}/>
-          <Route path="/blog" element= {<Blog/>}/>
-          <Route path="/services_freevaluation" element= {<Services_FreeValuation />}/>
-          <Route path="/services_affiliateprogram" element= {<Services_Affiliateprogram />}/>
-          <Route path="/contact" element= {<Contact/>}/>
+        <Route index element={<Home currency={currency} />} />
+        <Route path="/selling" element={<Selling />} />
+        <Route path="/rental" element={<Rental formHeading="General Enquiry" currency={currency} />} />
+        <Route path="/about" element={<AboutUs />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/services_freevaluation" element={<Services_FreeValuation />} />
+        <Route path="/services_affiliateprogram" element={<Services_Affiliateprogram />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
     </>

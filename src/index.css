@@ -2,6 +2,10 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  top: 0px !important;
+}
+body > .skiptranslate {
+	display: none !important;
 }
 
 /* code {

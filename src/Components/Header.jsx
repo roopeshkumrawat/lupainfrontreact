@@ -7,8 +7,19 @@ import It from "../images/IT-min.png";
 import Nl from "../images/NL-min.png";
 import Sv from "../images/SV-min.png";
 import Logo from "../images/logo-new.png";
+import Cookies from "js-cookie";
 
 function Header(props) {
+
+    const changeLanguage = (target) => {
+        console.log(Cookies.get("googtrans"));
+        Cookies.set("googtrans", `/en/${target}`, { expires: 7 });
+        // setLanguage(target);
+        window.location.reload();
+        document.body.style.top = "0px";
+    };
+
+
     return (
         <header>
 
@@ -18,19 +29,45 @@ function Header(props) {
 
                     <div className="translate unit-50">
                         <ul className="flags">
-                            <li><Link title="English" to="/" className="active English" data-lang="English"><img
-                                src={EN} alt="English" /></Link></li>
-                            {" "}<li><Link title="Spanish" to="/es/" className=" spanish" data-lang="Spanish"><img
+                            <li><Link onClick={() => {
+                                changeLanguage("en");
+                            }}
+                             title="English" to="/" className="active English" data-lang="English"><img
+                                    src={EN} alt="English" /></Link></li>
+                            {" "}<li><Link onClick={() => {
+                                changeLanguage("es");
+                            }}
+                             title="Spanish" to="/es/" className=" spanish" data-lang="Spanish"><img
                                 src={Es} alt="Spanish" /></Link></li>
-                            {" "}<li><Link title="German" to="/de/" className=" german" data-lang="German"><img
+                            {" "}<li><Link 
+                            onClick={() => {
+                                changeLanguage("de");
+                              }}
+                             title="German" to="/de/" className=" german" data-lang="German"><img
                                 src={De} alt="German" /></Link></li>
-                            {" "}<li><Link title="French" to="/fr/" className=" french" data-lang="French"><img
+                            {" "}<li><Link
+                            onClick={() => {
+                                changeLanguage("fr");
+                              }}
+                            title="French" to="/fr/" className=" french" data-lang="French"><img
                                 src={Fr} alt="French" /></Link></li>
-                            {" "}<li><Link title="Italian" to="/it/" className=" italian" data-lang="Italian"><img
+                            {" "}<li><Link 
+                            onClick={() => {
+                                changeLanguage("it");
+                              }}
+                            title="Italian" to="/it/" className=" italian" data-lang="Italian"><img
                                 src={It} alt="Italian" /></Link></li>
-                            {" "}<li><Link title="Dutch" to="/nl/" className=" dutch" data-lang="Dutch"><img
+                            {" "}<li><Link
+                            onClick={() => {
+                                changeLanguage("nl");
+                              }}
+                            title="Dutch" to="/nl/" className=" dutch" data-lang="Dutch"><img
                                 src={Nl} alt="Dutch" /></Link></li>
-                            {" "}<li><Link title="Swedish" to="/sv/" className=" swedish" data-lang="Swedish"><img
+                            {" "}<li><Link 
+                            onClick={() => {
+                                changeLanguage("sv");
+                              }}
+                            title="Swedish" to="/sv/" className=" swedish" data-lang="Swedish"><img
                                 src={Sv} alt="Swedish" /></Link></li>
                         </ul>
                     </div>
