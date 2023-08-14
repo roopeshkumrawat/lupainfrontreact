@@ -32,43 +32,43 @@ function Header(props) {
                             <li><Link onClick={() => {
                                 changeLanguage("en");
                             }}
-                             title="English" to="/" className="active English" data-lang="English"><img
+                                title="English" to="/" className="active English" data-lang="English"><img
                                     src={EN} alt="English" /></Link></li>
                             {" "}<li><Link onClick={() => {
                                 changeLanguage("es");
                             }}
-                             title="Spanish" to="/es/" className=" spanish" data-lang="Spanish"><img
-                                src={Es} alt="Spanish" /></Link></li>
-                            {" "}<li><Link 
-                            onClick={() => {
-                                changeLanguage("de");
-                              }}
-                             title="German" to="/de/" className=" german" data-lang="German"><img
-                                src={De} alt="German" /></Link></li>
+                                title="Spanish" to="/es/" className=" spanish" data-lang="Spanish"><img
+                                    src={Es} alt="Spanish" /></Link></li>
                             {" "}<li><Link
-                            onClick={() => {
-                                changeLanguage("fr");
-                              }}
-                            title="French" to="/fr/" className=" french" data-lang="French"><img
-                                src={Fr} alt="French" /></Link></li>
-                            {" "}<li><Link 
-                            onClick={() => {
-                                changeLanguage("it");
-                              }}
-                            title="Italian" to="/it/" className=" italian" data-lang="Italian"><img
-                                src={It} alt="Italian" /></Link></li>
+                                onClick={() => {
+                                    changeLanguage("de");
+                                }}
+                                title="German" to="/de/" className=" german" data-lang="German"><img
+                                    src={De} alt="German" /></Link></li>
                             {" "}<li><Link
-                            onClick={() => {
-                                changeLanguage("nl");
-                              }}
-                            title="Dutch" to="/nl/" className=" dutch" data-lang="Dutch"><img
-                                src={Nl} alt="Dutch" /></Link></li>
-                            {" "}<li><Link 
-                            onClick={() => {
-                                changeLanguage("sv");
-                              }}
-                            title="Swedish" to="/sv/" className=" swedish" data-lang="Swedish"><img
-                                src={Sv} alt="Swedish" /></Link></li>
+                                onClick={() => {
+                                    changeLanguage("fr");
+                                }}
+                                title="French" to="/fr/" className=" french" data-lang="French"><img
+                                    src={Fr} alt="French" /></Link></li>
+                            {" "}<li><Link
+                                onClick={() => {
+                                    changeLanguage("it");
+                                }}
+                                title="Italian" to="/it/" className=" italian" data-lang="Italian"><img
+                                    src={It} alt="Italian" /></Link></li>
+                            {" "}<li><Link
+                                onClick={() => {
+                                    changeLanguage("nl");
+                                }}
+                                title="Dutch" to="/nl/" className=" dutch" data-lang="Dutch"><img
+                                    src={Nl} alt="Dutch" /></Link></li>
+                            {" "}<li><Link
+                                onClick={() => {
+                                    changeLanguage("sv");
+                                }}
+                                title="Swedish" to="/sv/" className=" swedish" data-lang="Swedish"><img
+                                    src={Sv} alt="Swedish" /></Link></li>
                         </ul>
                     </div>
 
@@ -109,7 +109,7 @@ function Header(props) {
                 <nav className="wrapper">
                     <ul className="fullwidth">
                         <li className=""><Link to="/">Home</Link></li>
-                        <li className=""><Link to="/tenerife-properties-for-sale">Tenerife Properties</Link>
+                        <li className=""><Link to="tenerifeproperties">Tenerife Properties</Link>
                             <ul className="dropdown">
                                 <li className=""><Link to="/los-cristianos-properties-for-sale">Los Cristianos Properties</Link>
                                 </li>
@@ -132,20 +132,20 @@ function Header(props) {
                         <li className=""><Link to="/rental">Rentals</Link></li>
                         <li className=""><Link to="/about">About Us</Link>
                             <ul className="dropdown">
-                                <li><Link to="/history-of-lupain">History of Lupain</Link></li>
-                                <li><Link to="/testimonials">Testimonials</Link></li>
+                                <li><Link to="/historyoflupain">History of Lupain</Link></li>
+                                <li><Link to="/testimonial">Testimonials</Link></li>
                             </ul>
                         </li>
 
                         <li className=""><Link to="#">Information</Link>
                             <ul className="dropdown">
-                                <li><Link to="/buying-property">Buying Property</Link></li>
-                                <li><Link to="/sell-your-tenerife-property">Selling Property</Link>
+                                <li><Link to="/buying_properties">Buying Property</Link></li>
+                                <li><Link to="/selling">Selling Property</Link>
                                     <ul className="dropdown">
-                                        <li><Link to="/private-seller">Private Seller</Link></li>
-                                        <li><Link to="/affiliate-agents-developers">Affiliate Agents / Developers</Link>
+                                        <li><Link to="/privateseller">Private Seller</Link></li>
+                                        <li><Link to="/affiliate_agent">Affiliate Agents / Developers</Link>
                                         </li>
-                                        <li><Link to="/selling-a-business">Selling a Business</Link></li>
+                                        <li><Link to="/selling_business">Selling a Business</Link></li>
                                     </ul>
                                 </li>
                                 <li><Link to="/paperwork">Paperwork</Link></li>
