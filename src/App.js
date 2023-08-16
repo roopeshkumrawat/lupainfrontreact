@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import React from 'react';
 import './global.css';
+import './App.css';
 import Header from './Components/Header';
 import Footer from './Components/Footer';
 import MobileMenus from './Components/MobileMenus';
@@ -22,7 +23,8 @@ import Information_mortgages from './pages/Information_mortgages';
 import PrivateSeller from './pages/PrivateSeller';
 import AffiliateAgentDevloper from './pages/AffiliateAgentDevloper';
 import SellingBusiness from './pages/SellingBusiness';
-import TenerifeProperties from './pages/TenerifeProperties';
+import Luxury from './pages/Luxury';
+import SendMessage from './Components/globalComponents/SendMessage';
 
 
 function App() {
@@ -60,13 +62,23 @@ function App() {
   }
 
   return (
-    <>
+    <div className='app'>
       <div id="google_translate_element DisplayGoogleTranslate"></div>
       <MobileMenus />
       <Header currency={currency} setCurrencyDollar={setCurrencyDollar} setCurrencyEuro={setCurrencyEuro} setCurrencyPound={setCurrencyPound} />
       <Routes>
         <Route index element={<Home currency={currency} />} />
-        <Route path="/tenerifeproperties" element={<TenerifeProperties />} />
+        <Route path="/tenerifeproperties" element={<Luxury  currency={currency} heading="Tenerife Properties for Sale" totalProperties="1484" />} />
+        <Route path="/cristianosproperties" element={<Luxury  currency={currency} heading="Los Cristianos Properties for Sale" totalProperties="312" />} />
+        <Route path="/fanabeproperties" element={<Luxury  currency={currency} heading="Fanabe Properties for Sale" totalProperties="6" />} />
+        <Route path="/americasproperties" element={<Luxury  currency={currency} heading="Playa de Las Americas Properties for Sale" totalProperties="133" />} />
+        <Route path="/adejeproperties" element={<Luxury  currency={currency} heading="Costa Adeje Properties for Sale" totalProperties="82" />} />
+        <Route path="/eugenioproperties" element={<Luxury  currency={currency} heading="San Eugenio Properties for Sale" totalProperties="111" />} />
+        <Route path="/torviscasproperties" element={<Luxury  currency={currency} heading="Torviscas Properties for Sale" totalProperties="101" />} />
+        {/* <Route path="/luxury" element={<Luxury  currency={currency} heading="Luxury Properties in Tenerife" totalProperties="178" />} /> */}
+        <Route path="/businessproperties" element={<Luxury  currency={currency} heading="Business Properties in Tenerife" totalProperties="30" />} />
+        <Route path="/luxury" element={<Luxury  currency={currency} heading="Luxury Properties in Tenerife" totalProperties="178" />} />
+
         <Route path="/selling" element={<Selling />} />
         <Route path="/rental" element={<Rental formHeading="General Enquiry" currency={currency} />} />
         <Route path="/about" element={<AboutUs />} />
@@ -78,14 +90,14 @@ function App() {
         <Route path="/selling_business" element={<SellingBusiness />} />
         <Route path="/paperwork" element={<Information_paperwork />} />
         <Route path="/mortgages" element={<Information_mortgages />} />
-        
         <Route path="/blog" element={<Blog />} />
         <Route path="/services_freevaluation" element={<Services_FreeValuation />} />
         <Route path="/services_affiliateprogram" element={<Services_Affiliateprogram />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
-    </>
+      <SendMessage />
+    </div>
   );
 }
 

@@ -13,16 +13,16 @@ import tp9 from  "../images/thumb_1362738587_unnamed24.jpg";
 import tp10 from  "../images/thumb_1164382066_11.jpg";
 
 
-export default function TenerifeProperties() {
+export default function Luxury(props) {
     return (
         <section class="properties">
 
             <div class="wrapper units-row">
 
                 <div class="unit-70">
-                    <h1>Luxury Properties in Tenerife</h1>
+                    <h1>{props.heading}</h1>
                     <div class="count units-row">
-                        <div class="unit-70">178 Properties found</div>
+                        <div class="unit-70">{props.totalProperties} Properties found</div>
                         <div class="unit-30">
                             <select name="sort" id="sort">
                                 <option selected="selected" value="1">Recently Added</option>
@@ -49,7 +49,7 @@ export default function TenerifeProperties() {
                                         <li><strong>Location:</strong> Costa Adeje</li>
                                     </ul>
                                 </div>
-                                <div itemProp="price" class="price priceRange">€900,000</div>
+                                <div itemProp="price" class="price priceRange">{props.currency}900,000</div>
                                 <div class="view">More Info</div>
                             </div>
                         </a>
@@ -72,7 +72,7 @@ export default function TenerifeProperties() {
                                         <li><strong>Location:</strong> San Miguel</li>
                                     </ul>
                                 </div>
-                                <div itemProp="price" class="price priceRange">€635,000</div>
+                                <div itemProp="price" class="price priceRange">{props.currency}635,000</div>
                                 <div class="view">More Info</div>
                             </div>
                         </a>
@@ -95,7 +95,7 @@ export default function TenerifeProperties() {
                                         <li><strong>Location:</strong> Costa Del Silencio</li>
                                     </ul>
                                 </div>
-                                <div itemProp="price" class="price priceRange">€550,000</div>
+                                <div itemProp="price" class="price priceRange">{props.currency}550,000</div>
                                 <div class="view">More Info</div>
                             </div>
                         </a>
@@ -118,7 +118,7 @@ export default function TenerifeProperties() {
                                         <li><strong>Location:</strong> San Eugenio</li>
                                     </ul>
                                 </div>
-                                <div itemProp="price" class="price priceRange">€588,000</div>
+                                <div itemProp="price" class="price priceRange">{props.currency}588,000</div>
                                 <div class="view">More Info</div>
                             </div>
                         </a>
@@ -141,7 +141,7 @@ export default function TenerifeProperties() {
                                         <li><strong>Location:</strong> Guia De Isora</li>
                                     </ul>
                                 </div>
-                                <div itemProp="price" class="price priceRange">€590,000</div>
+                                <div itemProp="price" class="price priceRange">{props.currency}590,000</div>
                                 <div class="view">More Info</div>
                             </div>
                         </a>
@@ -164,7 +164,7 @@ export default function TenerifeProperties() {
                                         <li><strong>Location:</strong> El Roque</li>
                                     </ul>
                                 </div>
-                                <div itemProp="price" class="price priceRange">€1,300,000</div>
+                                <div itemProp="price" class="price priceRange">{props.currency}1,300,000</div>
                                 <div class="view">More Info</div>
                             </div>
                         </a>
@@ -187,7 +187,7 @@ export default function TenerifeProperties() {
                                         <li><strong>Location:</strong> Chayofa</li>
                                     </ul>
                                 </div>
-                                <div itemProp="price" class="price priceRange">€999,500</div>
+                                <div itemProp="price" class="price priceRange">{props.currency}999,500</div>
                                 <div class="view">More Info</div>
                             </div>
                         </a>
@@ -210,7 +210,7 @@ export default function TenerifeProperties() {
                                         <li><strong>Location:</strong> Costa Adeje</li>
                                     </ul>
                                 </div>
-                                <div itemProp="price" class="price priceRange">€720,000</div>
+                                <div itemProp="price" class="price priceRange">{props.currency}720,000</div>
                                 <div class="view">More Info</div>
                             </div>
                         </a>
@@ -233,7 +233,7 @@ export default function TenerifeProperties() {
                                         <li><strong>Location:</strong> San Eugenio</li>
                                     </ul>
                                 </div>
-                                <div itemProp="price" class="price priceRange">€1,099,000</div>
+                                <div itemProp="price" class="price priceRange">{props.currency}1,099,000</div>
                                 <div class="view">More Info</div>
                             </div>
                         </a>
@@ -256,7 +256,7 @@ export default function TenerifeProperties() {
                                         <li><strong>Location:</strong> Torviscas</li>
                                     </ul>
                                 </div>
-                                <div itemProp="price" class="price priceRange">€530,000</div>
+                                <div itemProp="price" class="price priceRange">{props.currency}530,000</div>
                                 <div class="view">More Info</div>
                             </div>
                         </a>

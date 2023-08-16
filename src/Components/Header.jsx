@@ -8,7 +8,7 @@ import Nl from "../images/NL-min.png";
 import Sv from "../images/SV-min.png";
 import Logo from "../images/logo-new.png";
 import Cookies from "js-cookie";
-
+import { HashLink } from "react-router-hash-link";
 function Header(props) {
 
     const changeLanguage = (target) => {
@@ -109,19 +109,19 @@ function Header(props) {
                 <nav className="wrapper">
                     <ul className="fullwidth">
                         <li className=""><Link to="/">Home</Link></li>
-                        <li className=""><Link to="tenerifeproperties">Tenerife Properties</Link>
+                        <li className=""><Link to="/tenerifeproperties">Tenerife Properties</Link>
                             <ul className="dropdown">
-                                <li className=""><Link to="/los-cristianos-properties-for-sale">Los Cristianos Properties</Link>
+                                <li className=""><Link to="/cristianosproperties">Los Cristianos Properties</Link>
                                 </li>
-                                <li className=""><Link to="/fanabe-properties-for-sale">Fanabe Properties</Link></li>
-                                <li className=""><Link to="/playa-de-las-americas-properties-for-sale">Las Americas
+                                <li className=""><Link to="/fanabeproperties">Fanabe Properties</Link></li>
+                                <li className=""><Link to="/americasproperties">Las Americas
                                     Properties</Link></li>
-                                <li className=""><Link to="/costa-adeje-properties-for-sale">Costa Adeje Properties</Link></li>
-                                <li className=""><Link to="/san-eugenio-properties-for-sale">San Eugenio Properties</Link></li>
-                                <li className=""><Link to="/torviscas-properties-for-sale">Torviscas Properties</Link></li>
-                                <li className=""><Link to="/#prime-locations">Prime Locations</Link></li>
-                                <li className=""><Link to="/properties-for-sale/business-properties">Business</Link></li>
-                                <li className=""><Link to="/properties-for-sale?luxury=1">Luxury</Link></li>
+                                <li className=""><Link to="/adejeproperties">Costa Adeje Properties</Link></li>
+                                <li className=""><Link to="/eugenioproperties">San Eugenio Properties</Link></li>
+                                <li className=""><Link to="/torviscasproperties">Torviscas Properties</Link></li>
+                                <li className=""><HashLink to="/#primeLocations" smooth={true} duration={500}>Prime Locations</HashLink></li>
+                                <li className=""><Link to="/businessproperties">Business</Link></li>
+                                <li className=""><Link to="/luxury">Luxury</Link></li>
                             </ul>
                         </li>
                         <li className=""><Link to="/selling">Selling</Link>

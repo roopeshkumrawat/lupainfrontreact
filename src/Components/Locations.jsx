@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 function Locations() {
     return (
 
-        <section className="locations" itemProp="image" itemScope
+        <section id="primeLocations" className="locations" itemProp="image" itemScope
             itemType="http://schema.org/RealEstateAgent http://schema.org/Product ">
             <Link name="prime-locations"></Link>
             <div className="wrapper">
