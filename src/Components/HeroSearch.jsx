@@ -339,10 +339,10 @@ function HeroSearch() {
                             {" "} <li id="search_complex" onClick={setComplexName}>Complex Name</li>
                             {" "} <li id="search_reference" onClick={setProperties}>Property Reference</li>
                             {" "} <li>
-                                <Link to="/properties-for-sale?sort=1&maxlimit=50">Recently Added</Link>
+                                <Link to="/tenerifeproperties">Recently Added</Link>
                             </li>
                             {" "} <li>
-                                <Link to="/properties-for-sale?luxury=1">Luxury</Link>
+                                <Link to="/luxury">Luxury</Link>
                             </li>
                             {" "}<li>
                                 <Link to="/selling">Selling</Link>

@@ -5,14 +5,14 @@ function AboutNavWithEnquiryBox(props) {
 
             <ul className="about-nav">
                 <li>About Lupain</li>
-                <li className="active"><Link to="/free-property-valuation">Get a FREE Valuation</Link></li>
-                <li className=""><Link to="/history-of-lupain">History of Lupain</Link></li>
-                <li className=""><Link to="/affiliate-program">Affiliate Program</Link></li>
-                <li className=""><Link to="/buying-property">Buying Property</Link></li>
-                <li className=""><Link to="/sell-your-tenerife-property">Selling Property</Link>
+                <li className="active"><Link to="/services_freevaluation">Get a FREE Valuation</Link></li>
+                <li className=""><Link to="/historyoflupain">History of Lupain</Link></li>
+                <li className=""><Link to="/services_affiliateprogram">Affiliate Program</Link></li>
+                <li className=""><Link to="/buying_properties">Buying Property</Link></li>
+                <li className=""><Link to="/selling">Selling Property</Link>
                 </li><li className=""><Link to="/paperwork">Paperwork</Link></li>
-                <li className=""><Link to="/mortgages">Mortgages</Link></li>
-                <li className=""><Link to="/testimonials">Testimonials</Link></li>
+                <li className=""><Link to="/mortgages">mortgages</Link></li>
+                <li className=""><Link to="/testimonial">testimonial</Link></li>
             </ul>
             <div className="enquiry box">
                 <Link name="contact"></Link>
